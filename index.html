@@ -1,0 +1,525 @@
+<!DOCTYPE html>
+<html lang="vi" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Soạn Văn Bản - Tự Động Hóa Văn Bản Đảng & Hành Chính | Minh Đỗ</title>
+  <meta name="description" content="Bộ AI Skill soạn văn bản Đảng (HD36) và Hành chính (NĐ30) tự động. 16 loại văn bản, 19 mẫu prompt, xuất file .docx chuẩn thể thức. Chỉ 200.000đ trọn bộ.">
+  <meta property="og:title" content="AI Soạn Văn Bản Đảng & Hành Chính - Trọn Bộ 200.000đ">
+  <meta property="og:description" content="Tự động hóa soạn thảo 16 loại văn bản chuẩn HD36 & NĐ30. Tiết kiệm 90% thời gian.">
+  <meta property="og:type" content="website">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--g-blue:#3B82F6;--g-purple:#7C3AED;--g-gold:#FBBF24;--bg:#0F172A}
+    *{font-family:'DM Sans',sans-serif}
+    h1,h2,h3,h4,h5,h6{font-family:'Space Grotesk',sans-serif}
+    @keyframes float{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(-30px) translateX(20px)}66%{transform:translateY(-15px) translateX(-20px)}}
+    @keyframes float-d{0%,100%{transform:translateY(0) translateX(0)}33%{transform:translateY(20px) translateX(-25px)}66%{transform:translateY(-25px) translateX(15px)}}
+    @keyframes pulse-glow{0%,100%{opacity:.5;transform:scale(1)}50%{opacity:.8;transform:scale(1.05)}}
+    @keyframes countUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+    .gradient-text{background:linear-gradient(135deg,var(--g-blue),var(--g-purple));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .gold-text{background:linear-gradient(135deg,#FBBF24,#F59E0B);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+    .glass{background:rgba(255,255,255,.05);backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px);border:1px solid rgba(255,255,255,.1)}
+    .glow-blue{box-shadow:0 0 30px rgba(59,130,246,.3)}
+    .glow-gold{box-shadow:0 0 30px rgba(251,191,36,.3)}
+    .fade-in{opacity:0;transform:translateY(30px);transition:opacity .8s ease-out,transform .8s ease-out}
+    .fade-in.visible{opacity:1;transform:translateY(0)}
+    .gradient-mesh{background:radial-gradient(circle at 20% 30%,rgba(59,130,246,.15) 0%,transparent 50%),radial-gradient(circle at 80% 70%,rgba(124,58,237,.15) 0%,transparent 50%),radial-gradient(circle at 50% 50%,rgba(251,191,36,.08) 0%,transparent 50%),#0F172A}
+    .orb{position:absolute;border-radius:50%;filter:blur(60px);opacity:.3;pointer-events:none}
+    .orb-1{width:400px;height:400px;background:var(--g-blue);top:10%;left:10%;animation:float 20s ease-in-out infinite}
+    .orb-2{width:300px;height:300px;background:var(--g-purple);bottom:20%;right:15%;animation:float-d 18s ease-in-out infinite}
+    .orb-3{width:250px;height:250px;background:var(--g-gold);top:50%;right:30%;animation:float 15s ease-in-out infinite}
+    .strike{text-decoration:line-through;opacity:.5}
+    .offer-card{transition:all .3s ease}
+    .offer-card:hover{transform:translateY(-4px);box-shadow:0 0 40px rgba(59,130,246,.2)}
+    .cta-btn{background:linear-gradient(135deg,var(--g-blue),var(--g-purple));transition:all .3s ease}
+    .cta-btn:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(59,130,246,.4)}
+    .check-item{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.75rem}
+    .check-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;margin-top:2px}
+  </style>
+</head>
+<body class="bg-slate-900 text-gray-300 antialiased overflow-x-hidden">
+
+  <!-- NAVBAR -->
+  <nav class="fixed top-4 left-0 right-0 z-50 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto glass rounded-2xl px-6 py-4 flex items-center justify-between">
+      <div class="flex items-center space-x-2">
+        <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold text-xl">VB</div>
+        <span class="text-white font-bold text-xl hidden sm:inline">AI Soạn Văn Bản</span>
+      </div>
+      <div class="hidden md:flex items-center space-x-8">
+        <a href="#features" class="text-gray-300 hover:text-white transition-colors">Tính năng</a>
+        <a href="#how-it-works" class="text-gray-300 hover:text-white transition-colors">Cách dùng</a>
+        <a href="#offer" class="text-gray-300 hover:text-white transition-colors">Ưu đãi</a>
+        <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
+      </div>
+      <div class="flex items-center space-x-4">
+        <a href="#offer" class="hidden sm:inline-block px-6 py-2.5 rounded-full cta-btn text-white font-semibold">Mua Ngay 200K</a>
+        <button id="mobile-toggle" class="md:hidden text-white">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden mt-2 glass rounded-2xl p-6 flex flex-col space-y-4">
+      <a href="#features" class="text-gray-300 hover:text-white py-2">Tính năng</a>
+      <a href="#how-it-works" class="text-gray-300 hover:text-white py-2">Cách dùng</a>
+      <a href="#offer" class="text-gray-300 hover:text-white py-2">Ưu đãi</a>
+      <a href="#faq" class="text-gray-300 hover:text-white py-2">FAQ</a>
+      <a href="#offer" class="px-6 py-2.5 rounded-full cta-btn text-white font-semibold text-center">Mua Ngay 200K</a>
+    </div>
+  </nav>
+
+  <!-- HERO -->
+  <section class="relative min-h-screen flex items-center justify-center pt-24 pb-20 px-4 md:px-8 gradient-mesh overflow-hidden">
+    <div class="orb orb-1"></div>
+    <div class="orb orb-2"></div>
+    <div class="orb orb-3"></div>
+    <div class="relative z-10 max-w-5xl mx-auto text-center">
+      <div class="inline-block px-4 py-2 rounded-full glass text-sm text-gray-300 mb-8">
+        <span class="text-green-400 mr-1">&#9679;</span> Đang mở bán - Giá ưu đãi chỉ <span class="text-yellow-400 font-bold">200.000đ</span>
+      </div>
+      <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
+        Soạn Văn Bản<br>
+        <span class="gradient-text">Đảng & Hành Chính</span><br>
+        Bằng AI Trong <span class="gold-text">30 Giây</span>
+      </h1>
+      <p class="text-lg md:text-xl text-gray-400 mb-10 max-w-3xl mx-auto leading-relaxed">
+        Trọn bộ 2 AI Skill + 19 mẫu Prompt. Tự động soạn <strong class="text-white">16 loại văn bản</strong> chuẩn Hướng dẫn 36 và Nghị định 30. Xuất file <strong class="text-white">.docx</strong> đúng thể thức, đúng font, đúng bố cục.
+      </p>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+        <a href="#offer" class="w-full sm:w-auto px-10 py-4 rounded-full cta-btn text-white font-bold text-lg glow-blue">
+          Nhận Trọn Bộ - 200.000đ
+        </a>
+        <a href="#how-it-works" class="w-full sm:w-auto px-10 py-4 rounded-full border-2 border-white/20 text-white font-semibold text-lg hover:bg-white/10 transition-all">
+          Xem Cách Hoạt Động
+        </a>
+      </div>
+      <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-8 text-sm">
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-yellow-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z"/></svg>
+          <span class="text-gray-400"><span class="text-white font-semibold">16</span> loại văn bản</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20"><path d="M9 2a1 1 0 000 2h2a1 1 0 100-2H9z"/><path fill-rule="evenodd" d="M4 5a2 2 0 012-2 3 3 0 003 3h2a3 3 0 003-3 2 2 0 012 2v11a2 2 0 01-2 2H6a2 2 0 01-2-2V5zm3 4a1 1 0 000 2h.01a1 1 0 100-2H7zm3 0a1 1 0 000 2h3a1 1 0 100-2h-3zm-3 4a1 1 0 100 2h.01a1 1 0 100-2H7zm3 0a1 1 0 100 2h3a1 1 0 100-2h-3z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-400"><span class="text-white font-semibold">19</span> mẫu prompt</span>
+        </div>
+        <div class="flex items-center gap-2">
+          <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
+          <span class="text-gray-400">Xuất <span class="text-white font-semibold">.docx</span> chuẩn</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PAIN AGITATION -->
+  <section class="py-20 px-4 md:px-8 bg-slate-800/50 fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold text-white mb-8">Bạn Đang Mất Bao Nhiêu Thời Gian Cho Văn Bản?</h2>
+      <div class="grid sm:grid-cols-2 gap-6 mb-12">
+        <div class="glass rounded-2xl p-6 border-l-4 border-red-500">
+          <div class="text-3xl mb-3">&#9203;</div>
+          <h3 class="text-lg font-bold text-white mb-2">2-4 giờ/văn bản</h3>
+          <p class="text-gray-400 text-sm">Soạn thủ công, kiểm tra thể thức, chỉnh sửa font chữ, căn lề - lặp đi lặp lại mỗi ngày</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border-l-4 border-red-500">
+          <div class="text-3xl mb-3">&#128680;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Sai thể thức = Trả lại</h3>
+          <p class="text-gray-400 text-sm">Sai font, sai cỡ chữ, sai ký hiệu văn bản, sai bố cục chữ ký - văn bản bị trả lại, mất uy tín</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border-l-4 border-red-500">
+          <div class="text-3xl mb-3">&#128196;</div>
+          <h3 class="text-lg font-bold text-white mb-2">14 loại VB Đảng + 2 loại VB HC</h3>
+          <p class="text-gray-400 text-sm">Mỗi loại có thể thức khác nhau - nhớ hết quy tắc là điều gần như không thể</p>
+        </div>
+        <div class="glass rounded-2xl p-6 border-l-4 border-red-500">
+          <div class="text-3xl mb-3">&#128561;</div>
+          <h3 class="text-lg font-bold text-white mb-2">HD36 & NĐ30 phức tạp</h3>
+          <p class="text-gray-400 text-sm">Hướng dẫn 36 và Nghị định 30 quy định chi tiết từng chi tiết nhỏ - khó nắm hết</p>
+        </div>
+      </div>
+      <p class="text-xl text-gray-400">Nếu bạn đang tốn <span class="text-red-400 font-bold">2-4 giờ mỗi văn bản</span>, hãy tưởng tượng chỉ cần <span class="text-green-400 font-bold">30 giây</span>.</p>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section id="features" class="py-20 px-4 md:px-8 bg-slate-900 fade-in">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Trọn Bộ Gồm Những Gì?</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">2 AI Skill chuyên biệt + 19 mẫu Prompt cover toàn bộ loại văn bản</p>
+      </div>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <!-- Skill 1 -->
+        <div class="glass rounded-2xl p-8 offer-card border-l-4 border-blue-500">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Skill VB Đảng (HD36)</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">Soạn 14 loại văn bản Đảng theo Hướng dẫn 36-HD/VPTW</p>
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>&#10003; Nghị quyết, Quyết định, Chỉ thị</li>
+            <li>&#10003; Quy chế, Quy định, Kết luận</li>
+            <li>&#10003; Thông báo, Hướng dẫn, Báo cáo</li>
+            <li>&#10003; Công văn, Tờ trình, Biên bản</li>
+            <li>&#10003; Chương trình, Kế hoạch</li>
+          </ul>
+        </div>
+        <!-- Skill 2 -->
+        <div class="glass rounded-2xl p-8 offer-card border-l-4 border-purple-500">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">Skill VB Hành Chính (NĐ30)</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">Soạn văn bản hành chính theo Nghị định 30/2020/NĐ-CP</p>
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>&#10003; Công văn hành chính</li>
+            <li>&#10003; Quyết định cá biệt</li>
+            <li>&#10003; Đúng chuẩn số ký hiệu, ngày tháng</li>
+            <li>&#10003; Đúng phân quyền ký (TM, KT, TL, TUQ)</li>
+            <li>&#10003; Xuất .docx hoàn chỉnh</li>
+          </ul>
+        </div>
+        <!-- Bonus: Prompts -->
+        <div class="glass rounded-2xl p-8 offer-card border-l-4 border-yellow-500">
+          <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center mb-6">
+            <svg class="w-7 h-7 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 10h.01M12 10h.01M16 10h.01M9 16H5a2 2 0 01-2-2V6a2 2 0 012-2h14a2 2 0 012 2v8a2 2 0 01-2 2h-5l-5 5v-5z"/></svg>
+          </div>
+          <h3 class="text-xl font-bold text-white mb-3">19 Mẫu Prompt Sẵn</h3>
+          <p class="text-gray-400 leading-relaxed mb-4">Chỉ cần copy - paste - điền thông tin, AI tự soạn</p>
+          <ul class="text-sm text-gray-400 space-y-2">
+            <li>&#10003; Cover toàn bộ 16 loại VB</li>
+            <li>&#10003; Mỗi prompt đã tối ưu sẵn</li>
+            <li>&#10003; Kèm hướng dẫn sử dụng</li>
+            <li>&#10003; Bảng tra nhanh loại VB</li>
+            <li>&#10003; Cập nhật miễn phí</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section id="how-it-works" class="py-20 px-4 md:px-8 bg-slate-800/50 fade-in">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Chỉ 3 Bước, Có Ngay Văn Bản Chuẩn</h2>
+        <p class="text-xl text-gray-400 max-w-2xl mx-auto">Không cần biết code. Không cần nhớ thể thức. AI lo tất cả.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-8 relative">
+        <div class="hidden md:block absolute top-20 left-0 right-0 h-0.5 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-yellow-500/20" style="top:80px"></div>
+        <!-- Step 1 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg glow-blue">1</div>
+          <div class="glass rounded-2xl p-6">
+            <div class="text-4xl mb-4">&#128172;</div>
+            <h3 class="text-xl font-bold text-white mb-3">Nói Cho AI Biết</h3>
+            <p class="text-gray-400">"Soạn Nghị quyết của Huyện ủy Đồng Văn về công tác cán bộ năm 2026"</p>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-purple-500 to-pink-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg" style="box-shadow:0 0 30px rgba(124,58,237,.3)">2</div>
+          <div class="glass rounded-2xl p-6">
+            <div class="text-4xl mb-4">&#9881;&#65039;</div>
+            <h3 class="text-xl font-bold text-white mb-3">AI Tự Xử Lý</h3>
+            <p class="text-gray-400">AI đọc quy tắc HD36/NĐ30, chọn đúng thể thức, font chữ, bố cục, chữ ký</p>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="relative text-center">
+          <div class="relative z-10 w-20 h-20 mx-auto mb-6 rounded-full bg-gradient-to-br from-yellow-500 to-orange-600 flex items-center justify-center text-white text-3xl font-bold shadow-lg glow-gold">3</div>
+          <div class="glass rounded-2xl p-6">
+            <div class="text-4xl mb-4">&#128195;</div>
+            <h3 class="text-xl font-bold text-white mb-3">Nhận File .docx</h3>
+            <p class="text-gray-400">Văn bản chuẩn thể thức, sẵn sàng in ấn hoặc gửi đi. Chỉ mất 30 giây!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- STATS BAR -->
+  <section class="py-16 px-4 md:px-8 bg-gradient-to-r from-blue-600 via-purple-600 to-yellow-500 fade-in">
+    <div class="max-w-6xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-8 text-center">
+        <div>
+          <div class="text-5xl md:text-6xl font-bold text-white mb-2">16</div>
+          <div class="text-white/90 uppercase tracking-wider text-sm">Loại Văn Bản</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold text-white mb-2">19</div>
+          <div class="text-white/90 uppercase tracking-wider text-sm">Mẫu Prompt</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold text-white mb-2">30s</div>
+          <div class="text-white/90 uppercase tracking-wider text-sm">Thời Gian Soạn</div>
+        </div>
+        <div>
+          <div class="text-5xl md:text-6xl font-bold text-white mb-2">90%</div>
+          <div class="text-white/90 uppercase tracking-wider text-sm">Tiết Kiệm Thời Gian</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="py-20 px-4 md:px-8 bg-slate-900 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Trước & Sau Khi Dùng</h2>
+      </div>
+      <div class="grid md:grid-cols-2 gap-8">
+        <!-- Before -->
+        <div class="glass rounded-2xl p-8 border-l-4 border-red-500">
+          <h3 class="text-xl font-bold text-red-400 mb-6">&#10060; Trước khi có AI Skill</h3>
+          <ul class="space-y-4 text-gray-400">
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-1">&#10005;</span> Mở mẫu cũ, copy, chỉnh sửa thủ công</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-1">&#10005;</span> Tra cứu HD36/NĐ30 để kiểm tra thể thức</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-1">&#10005;</span> Căn lề, chỉnh font, đặt cỡ chữ từng phần</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-1">&#10005;</span> Sai ký hiệu, sai phân quyền ký</li>
+            <li class="flex items-start gap-3"><span class="text-red-400 mt-1">&#10005;</span> Mất 2-4 giờ cho mỗi văn bản</li>
+          </ul>
+        </div>
+        <!-- After -->
+        <div class="glass rounded-2xl p-8 border-l-4 border-green-500">
+          <h3 class="text-xl font-bold text-green-400 mb-6">&#10004; Sau khi dùng AI Skill</h3>
+          <ul class="space-y-4 text-gray-400">
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-1">&#10003;</span> Nói 1 câu, AI soạn xong toàn bộ</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-1">&#10003;</span> Tự đúng thể thức HD36/NĐ30</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-1">&#10003;</span> Font, cỡ chữ, lề chính xác 100%</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-1">&#10003;</span> Tự phân quyền ký (TM, KT, TL, TUQ)</li>
+            <li class="flex items-start gap-3"><span class="text-green-400 mt-1">&#10003;</span> Chỉ mất 30 giây, xuất .docx ngay</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OFFER STACK -->
+  <section id="offer" class="py-20 px-4 md:px-8 bg-slate-800/50 fade-in">
+    <div class="max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Trọn Bộ AI Soạn Văn Bản</h2>
+      <p class="text-xl text-gray-400 mb-12">Tất cả những gì bạn cần để soạn văn bản Đảng & Hành chính chuẩn 100%</p>
+
+      <div class="glass rounded-3xl p-8 md:p-12 relative overflow-hidden mb-8">
+        <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-blue-500 via-purple-500 to-yellow-500"></div>
+
+        <!-- Value items -->
+        <div class="space-y-6 mb-10 text-left max-w-xl mx-auto">
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">Skill VB Đảng HD36</span> - 14 loại văn bản <span class="text-gray-500 strike">500.000đ</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">Skill VB Hành Chính NĐ30</span> - Công văn & Quyết định <span class="text-gray-500 strike">300.000đ</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">19 Mẫu Prompt</span> - Copy-paste & dùng ngay <span class="text-gray-500 strike">200.000đ</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">Tài liệu HD36 & NĐ30</span> - Reference files đầy đủ <span class="text-gray-500 strike">150.000đ</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">Hướng dẫn cài đặt & sử dụng</span> - Step-by-step <span class="text-gray-500 strike">100.000đ</span></div>
+          </div>
+          <div class="check-item">
+            <div class="check-icon"><svg class="w-4 h-4 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="3" d="M5 13l4 4L19 7"/></svg></div>
+            <div><span class="text-white font-semibold">Cập nhật miễn phí</span> - Khi HD36/NĐ30 thay đổi <span class="text-gray-500 strike">Vô giá</span></div>
+          </div>
+        </div>
+
+        <!-- Price -->
+        <div class="border-t border-white/10 pt-8 mb-8">
+          <p class="text-gray-400 mb-2">Tổng giá trị: <span class="strike text-gray-500">1.250.000đ</span></p>
+          <p class="text-lg text-gray-300 mb-4">Hôm nay bạn chỉ cần trả:</p>
+          <div class="text-6xl md:text-7xl font-bold gold-text mb-2">200.000đ</div>
+          <p class="text-sm text-gray-500">Thanh toán một lần - Sử dụng mãi mãi</p>
+        </div>
+
+        <!-- CTA -->
+        <a href="https://zalo.me/g/igkywu632" target="_blank" class="inline-block px-12 py-5 rounded-full cta-btn text-white font-bold text-xl glow-blue mb-4">
+          Nhận Trọn Bộ Ngay - 200.000đ
+        </a>
+        <p class="text-sm text-gray-500">Liên hệ qua Zalo để nhận sản phẩm ngay sau thanh toán</p>
+      </div>
+
+      <!-- Guarantee -->
+      <div class="glass rounded-2xl p-6 flex flex-col sm:flex-row items-center gap-4 max-w-2xl mx-auto">
+        <div class="flex-shrink-0 w-16 h-16 rounded-full bg-gradient-to-br from-green-500 to-emerald-600 flex items-center justify-center">
+          <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z"/></svg>
+        </div>
+        <div class="text-left">
+          <h4 class="text-white font-bold text-lg">Bảo Hành 7 Ngày - Hoàn Tiền 100%</h4>
+          <p class="text-gray-400 text-sm">Nếu AI Skill không hoạt động hoặc không đúng như mô tả, bạn được hoàn tiền 100%. Không hỏi lý do.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- AI-POWERED BADGE -->
+  <section class="py-20 px-4 md:px-8 bg-slate-900 fade-in">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Ai Nên Dùng Bộ Này?</h2>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#127963;&#65039;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Cán bộ Đảng</h3>
+          <p class="text-gray-400 text-sm">Cấp huyện, tỉnh cần soạn Nghị quyết, Quyết định, Chỉ thị nhanh</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#128188;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Công chức UBND</h3>
+          <p class="text-gray-400 text-sm">Soạn Công văn, Quyết định hành chính đúng NĐ30 ngay lập tức</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#128218;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Văn phòng</h3>
+          <p class="text-gray-400 text-sm">Nhân viên văn phòng cần xuất nhiều văn bản mỗi ngày</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#128187;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Người dùng AI</h3>
+          <p class="text-gray-400 text-sm">Đã dùng Claude/Gemini và muốn tận dụng AI cho công việc hành chính</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#127891;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Sinh viên Luật/HC</h3>
+          <p class="text-gray-400 text-sm">Học thể thức văn bản thông qua thực hành với AI</p>
+        </div>
+        <div class="glass rounded-2xl p-6 text-center offer-card">
+          <div class="text-4xl mb-4">&#128640;</div>
+          <h3 class="text-lg font-bold text-white mb-2">Người Tiên Phong</h3>
+          <p class="text-gray-400 text-sm">Muốn đi trước thời đại, ứng dụng AI vào hành chính công</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-20 px-4 md:px-8 bg-slate-800/50 fade-in">
+    <div class="max-w-3xl mx-auto">
+      <h2 class="text-3xl md:text-5xl font-bold text-white text-center mb-12">Câu Hỏi Thường Gặp</h2>
+      <div class="space-y-4">
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            AI Skill này hoạt động trên nền tảng nào?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Bộ Skill hoạt động trên Claude (Anthropic) thông qua tính năng Agent/Skill. Bạn cần tài khoản Claude Pro hoặc Claude Team để sử dụng. Gemini hoặc các nền tảng AI khác hỗ trợ MCP cũng có thể dùng được.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            Tôi không biết gì về code, có dùng được không?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Hoàn toàn được! Bộ Skill đi kèm hướng dẫn cài đặt step-by-step và 19 mẫu prompt sẵn. Bạn chỉ cần copy-paste prompt, điền thông tin văn bản, rồi nhấn Enter. AI sẽ tự xử lý phần còn lại.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            Văn bản xuất ra có đúng thể thức HD36/NĐ30 không?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Có. Mỗi Skill được xây dựng dựa trên toàn bộ quy tắc thể thức trong HD36-HD/VPTW và NĐ30/2020/NĐ-CP. Từ font chữ (Times New Roman), cỡ chữ (13-14pt), lề (trên 20mm, dưới 20mm, trái 30mm, phải 15-20mm), cho đến bố cục chữ ký, ký hiệu văn bản - tất cả đều tuân thủ.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            Thanh toán bằng cách nào?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Bạn liên hệ qua nhóm Zalo (nhấn nút Mua Ngay), giao dịch qua chuyển khoản ngân hàng. Sau khi thanh toán, bạn nhận ngay toàn bộ file Skill, Prompt, và hướng dẫn cài đặt.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            Có được cập nhật khi quy định thay đổi không?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Có! Khi HD36 hoặc NĐ30 có thay đổi, Skill sẽ được cập nhật tương ứng và bạn nhận bản cập nhật miễn phí qua nhóm Zalo.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            Có hỗ trợ sau mua không?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Có. Bạn được hỗ trợ cài đặt và sử dụng qua nhóm Zalo. Mọi thắc mắc về kỹ thuật hoặc cách dùng đều được giải đáp nhanh chóng.</div>
+        </div>
+        <div class="glass rounded-2xl overflow-hidden">
+          <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
+            200.000đ là thanh toán một lần hay hàng tháng?
+            <span class="faq-icon text-2xl text-gray-400">+</span>
+          </button>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Thanh toán một lần duy nhất. Bạn sở hữu trọn bộ Skill vĩnh viễn, không phát sinh thêm chi phí nào.</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="py-20 px-4 md:px-8 gradient-mesh relative overflow-hidden fade-in">
+    <div class="orb orb-1" style="opacity:.15"></div>
+    <div class="orb orb-2" style="opacity:.15"></div>
+    <div class="relative z-10 max-w-4xl mx-auto text-center">
+      <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Đừng Tốn Thêm 4 Giờ Cho 1 Văn Bản</h2>
+      <p class="text-xl text-gray-400 mb-10 max-w-2xl mx-auto">Bộ AI Skill giá chỉ bằng 2 ly cà phê, nhưng tiết kiệm cho bạn hàng trăm giờ soạn thảo mỗi năm.</p>
+      <a href="https://zalo.me/g/igkywu632" target="_blank" class="inline-block px-12 py-5 rounded-full cta-btn text-white font-bold text-xl glow-blue mb-6">
+        Nhận Trọn Bộ - Chỉ 200.000đ
+      </a>
+      <p class="text-sm text-gray-500">Bảo hành 7 ngày hoàn tiền 100% | Cập nhật miễn phí | Hỗ trợ Zalo</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="bg-slate-950 py-12 px-4 md:px-8">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center gap-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-xl bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center text-white font-bold">VB</div>
+          <span class="text-white font-bold text-lg">AI Soạn Văn Bản</span>
+        </div>
+        <div class="text-center md:text-right">
+          <a href="https://zalo.me/g/igkywu632" target="_blank" class="inline-flex items-center gap-2 px-5 py-2 rounded-full border border-yellow-500/50 text-yellow-400 hover:bg-yellow-500/10 transition text-sm font-semibold">
+            <span>&#9733;</span> Minh Do - Liên hệ Zalo
+          </a>
+        </div>
+      </div>
+      <div class="border-t border-white/10 mt-8 pt-8 text-center text-sm text-gray-500">
+        <p>&copy; 2026 <a href="https://zalo.me/g/igkywu632" target="_blank" class="text-yellow-400 hover:underline">Minh Do</a>. AI Soạn Văn Bản - Tự Động Hóa Hành Chính Bằng AI.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- SCRIPTS -->
+  <script>
+    // Mobile menu toggle
+    document.getElementById('mobile-toggle').addEventListener('click',()=>{
+      document.getElementById('mobile-menu').classList.toggle('hidden');
+    });
+    // Close mobile menu on link click
+    document.querySelectorAll('#mobile-menu a').forEach(a=>{
+      a.addEventListener('click',()=>document.getElementById('mobile-menu').classList.add('hidden'));
+    });
+    // FAQ accordion
+    document.querySelectorAll('.faq-btn').forEach(btn=>{
+      btn.addEventListener('click',()=>{
+        const c=btn.nextElementSibling;
+        const i=btn.querySelector('.faq-icon');
+        c.classList.toggle('hidden');
+        i.textContent=c.classList.contains('hidden')?'+':String.fromCharCode(8722);
+      });
+    });
+    // Fade-in on scroll
+    const obs=new IntersectionObserver((entries)=>{
+      entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
+    },{threshold:.1});
+    document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+  </script>
+</body>
+</html>
