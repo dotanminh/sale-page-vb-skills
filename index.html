@@ -4,9 +4,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>AI Soạn Văn Bản - Tự Động Hóa Văn Bản Đảng & Hành Chính | Minh Đỗ</title>
-  <meta name="description" content="Bộ AI Skill soạn văn bản Đảng (HD36) và Hành chính (NĐ30) tự động. 16 loại văn bản, 19 mẫu prompt, xuất file .docx chuẩn thể thức. Chỉ 200.000đ trọn bộ.">
-  <meta property="og:title" content="AI Soạn Văn Bản Đảng & Hành Chính - Trọn Bộ 200.000đ">
-  <meta property="og:description" content="Tự động hóa soạn thảo 16 loại văn bản chuẩn HD36 & NĐ30. Tiết kiệm 90% thời gian.">
+  <meta name="description" content="Bộ AI Skill soạn văn bản Đảng (HD36) và Hành chính (NĐ30) tự động. 16 loại văn bản, 19 mẫu prompt, xuất file .docx chuẩn thể thức. Chỉ 259.000đ trong 24h đầu.">
+  <meta property="og:title" content="AI Soạn Văn Bản Đảng & Hành Chính - Flash Sale 259.000đ">
+  <meta property="og:description" content="Tự động hóa soạn thảo 16 loại văn bản chuẩn HD36 & NĐ30. Giá ưu đãi 259K chỉ trong 24h đầu.">
   <meta property="og:type" content="website">
   <script src="https://cdn.tailwindcss.com"></script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -39,6 +39,10 @@
     .cta-btn:hover{transform:scale(1.05);box-shadow:0 0 40px rgba(59,130,246,.4)}
     .check-item{display:flex;align-items:flex-start;gap:.75rem;margin-bottom:.75rem}
     .check-icon{flex-shrink:0;width:24px;height:24px;border-radius:50%;background:linear-gradient(135deg,#22c55e,#16a34a);display:flex;align-items:center;justify-content:center;margin-top:2px}
+    @keyframes pulse-urgent{0%,100%{box-shadow:0 0 20px rgba(239,68,68,.3)}50%{box-shadow:0 0 40px rgba(239,68,68,.6)}}
+    .countdown-box{animation:pulse-urgent 2s ease-in-out infinite}
+    .timer-digit{font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:2rem;line-height:1;min-width:3.5rem;text-align:center;background:rgba(255,255,255,.1);border-radius:.75rem;padding:.5rem .75rem}
+    @media(min-width:640px){.timer-digit{font-size:2.5rem;min-width:4rem;padding:.75rem 1rem}}
   </style>
 </head>
 <body class="bg-slate-900 text-gray-300 antialiased overflow-x-hidden">
@@ -57,7 +61,7 @@
         <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
       </div>
       <div class="flex items-center space-x-4">
-        <a href="#offer" class="hidden sm:inline-block px-6 py-2.5 rounded-full cta-btn text-white font-semibold">Mua Ngay 200K</a>
+        <a href="#offer" class="hidden sm:inline-block px-6 py-2.5 rounded-full cta-btn text-white font-semibold">Flash Sale 259K</a>
         <button id="mobile-toggle" class="md:hidden text-white">
           <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/></svg>
         </button>
@@ -68,7 +72,7 @@
       <a href="#how-it-works" class="text-gray-300 hover:text-white py-2">Cách dùng</a>
       <a href="#offer" class="text-gray-300 hover:text-white py-2">Ưu đãi</a>
       <a href="#faq" class="text-gray-300 hover:text-white py-2">FAQ</a>
-      <a href="#offer" class="px-6 py-2.5 rounded-full cta-btn text-white font-semibold text-center">Mua Ngay 200K</a>
+      <a href="#offer" class="px-6 py-2.5 rounded-full cta-btn text-white font-semibold text-center">Flash Sale 259K</a>
     </div>
   </nav>
 
@@ -78,8 +82,18 @@
     <div class="orb orb-2"></div>
     <div class="orb orb-3"></div>
     <div class="relative z-10 max-w-5xl mx-auto text-center">
-      <div class="inline-block px-4 py-2 rounded-full glass text-sm text-gray-300 mb-8">
-        <span class="text-green-400 mr-1">&#9679;</span> Đang mở bán - Giá ưu đãi chỉ <span class="text-yellow-400 font-bold">200.000đ</span>
+      <div class="inline-block px-4 py-2 rounded-full glass text-sm text-gray-300 mb-4">
+        <span class="text-red-400 mr-1 animate-pulse">&#9679;</span> Flash Sale 24h - Giá ưu đãi chỉ <span class="text-yellow-400 font-bold">259.000đ</span> <span class="text-gray-500">(sau 24h: 399.000đ)</span>
+      </div>
+      <!-- Countdown Timer -->
+      <div id="hero-countdown" class="inline-flex items-center gap-3 px-6 py-3 rounded-2xl bg-red-500/10 border border-red-500/30 mb-8 countdown-box">
+        <svg class="w-5 h-5 text-red-400 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+        <span class="text-red-400 font-semibold text-sm">Còn lại:</span>
+        <div class="flex items-center gap-1">
+          <span id="cd-hours" class="timer-digit text-white">00</span><span class="text-red-400 font-bold text-xl">:</span>
+          <span id="cd-mins" class="timer-digit text-white">00</span><span class="text-red-400 font-bold text-xl">:</span>
+          <span id="cd-secs" class="timer-digit text-white">00</span>
+        </div>
       </div>
       <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white leading-tight mb-6">
         Soạn Văn Bản<br>
@@ -91,7 +105,7 @@
       </p>
       <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
         <a href="#offer" class="w-full sm:w-auto px-10 py-4 rounded-full cta-btn text-white font-bold text-lg glow-blue">
-          Nhận Trọn Bộ - 200.000đ
+          Nhận Trọn Bộ - 259.000đ
         </a>
         <a href="#how-it-works" class="w-full sm:w-auto px-10 py-4 rounded-full border-2 border-white/20 text-white font-semibold text-lg hover:bg-white/10 transition-all">
           Xem Cách Hoạt Động
@@ -336,11 +350,26 @@
         </div>
 
         <!-- Price -->
-        <div class="border-t border-white/10 pt-8 mb-8">
+        <div class="border-t border-white/10 pt-8 mb-4">
           <p class="text-gray-400 mb-2">Tổng giá trị: <span class="strike text-gray-500">1.250.000đ</span></p>
-          <p class="text-lg text-gray-300 mb-4">Hôm nay bạn chỉ cần trả:</p>
-          <div class="text-6xl md:text-7xl font-bold gold-text mb-2">200.000đ</div>
-          <p class="text-sm text-gray-500">Thanh toán một lần - Sử dụng mãi mãi</p>
+          <p class="text-lg text-gray-300 mb-4">Trong <span class="text-red-400 font-bold">24 giờ đầu</span>, bạn chỉ cần trả:</p>
+          <div class="text-6xl md:text-7xl font-bold gold-text mb-2">259.000đ</div>
+          <p class="text-sm text-gray-400 mb-4">Thanh toán một lần - Sử dụng mãi mãi</p>
+        </div>
+        <!-- Urgency countdown -->
+        <div class="bg-red-500/10 border border-red-500/30 rounded-2xl p-4 mb-8 countdown-box">
+          <div class="flex flex-col sm:flex-row items-center justify-center gap-3">
+            <div class="flex items-center gap-2">
+              <svg class="w-5 h-5 text-red-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+              <span class="text-red-400 font-bold text-sm">Ưu đãi kết thúc sau:</span>
+            </div>
+            <div class="flex items-center gap-1">
+              <span id="offer-hours" class="timer-digit text-white">00</span><span class="text-red-400 font-bold text-xl">:</span>
+              <span id="offer-mins" class="timer-digit text-white">00</span><span class="text-red-400 font-bold text-xl">:</span>
+              <span id="offer-secs" class="timer-digit text-white">00</span>
+            </div>
+          </div>
+          <p class="text-center text-xs text-gray-500 mt-2">Sau đó giá sẽ tăng lên <span class="text-red-400 font-semibold">399.000đ</span></p>
         </div>
 
         <!-- CTA -->
@@ -421,7 +450,7 @@
             AI Skill này hoạt động trên nền tảng nào?
             <span class="faq-icon text-2xl text-gray-400">+</span>
           </button>
-          <div class="faq-content hidden px-6 pb-6 text-gray-400">Bộ Skill hoạt động trên Claude (Anthropic) thông qua tính năng Agent/Skill. Bạn cần tài khoản Claude Pro hoặc Claude Team để sử dụng. Gemini hoặc các nền tảng AI khác hỗ trợ MCP cũng có thể dùng được.</div>
+          <div class="faq-content hidden px-6 pb-6 text-gray-400">Bộ Skill hoạt động trên <strong class="text-white">Claude</strong> (Anthropic) thông qua tính năng Agent/Skill, hoặc trên <strong class="text-white">Google Antigravity</strong> (Gemini). Bạn cần tài khoản Claude Pro/Team hoặc Gemini Advanced để sử dụng.</div>
         </div>
         <div class="glass rounded-2xl overflow-hidden">
           <button class="faq-btn w-full text-left p-6 font-semibold text-lg flex justify-between items-center hover:bg-white/5 transition text-white">
@@ -534,6 +563,50 @@
       entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add('visible');obs.unobserve(e.target)}});
     },{threshold:.1});
     document.querySelectorAll('.fade-in').forEach(el=>obs.observe(el));
+
+    // 24h Countdown Timer with localStorage persistence
+    (function(){
+      const KEY='vb_sale_deadline';
+      let deadline=localStorage.getItem(KEY);
+      if(!deadline){
+        deadline=Date.now()+24*60*60*1000;
+        localStorage.setItem(KEY,deadline);
+      }else{
+        deadline=parseInt(deadline);
+      }
+      function pad(n){return String(n).padStart(2,'0');}
+      function update(){
+        const now=Date.now();
+        let diff=deadline-now;
+        if(diff<=0){
+          diff=0;
+          // Show expired state
+          document.querySelectorAll('.countdown-box').forEach(el=>{
+            el.innerHTML='<p class="text-red-400 font-bold text-center py-2">\u26a0\ufe0f \u01afu \u0111\u00e3i \u0111\u00e3 k\u1ebft th\u00fac! Gi\u00e1 hi\u1ec7n t\u1ea1i: <span class="text-white">399.000\u0111</span></p>';
+          });
+          // Update price displays
+          document.querySelectorAll('.gold-text').forEach(el=>{
+            if(el.textContent.includes('259'))el.textContent='399.000\u0111';
+          });
+          return;
+        }
+        const h=Math.floor(diff/3600000);
+        const m=Math.floor((diff%3600000)/60000);
+        const s=Math.floor((diff%60000)/1000);
+        // Hero countdown
+        const ch=document.getElementById('cd-hours');
+        const cm=document.getElementById('cd-mins');
+        const cs=document.getElementById('cd-secs');
+        if(ch){ch.textContent=pad(h);cm.textContent=pad(m);cs.textContent=pad(s);}
+        // Offer countdown
+        const oh=document.getElementById('offer-hours');
+        const om=document.getElementById('offer-mins');
+        const os=document.getElementById('offer-secs');
+        if(oh){oh.textContent=pad(h);om.textContent=pad(m);os.textContent=pad(s);}
+        requestAnimationFrame(update);
+      }
+      update();
+    })();
   </script>
 </body>
 </html>
